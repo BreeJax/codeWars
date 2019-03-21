@@ -1,0 +1,18 @@
+https://www.codewars.com/kata/changing-letters/train/javascript
+
+function swap(st){
+let splitter = st.split("");
+let splitterArray= splitter.map(letter => {
+  if(letter === "a" || letter === "e" ||letter === "i" ||letter === "o" ||letter === "u"){
+   return letter.toUpperCase();
+  } else {
+  return letter
+}});
+
+return splitterArray.join("");// st with uppercased vowels 
+}
+
+Test.describe("Basic Tests", _=>{
+  Test.assertEquals(swap("HelloWorld!"),"HEllOWOrld!")
+  Test.assertEquals(swap("Sunday"),"SUndAy")
+});
